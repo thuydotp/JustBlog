@@ -1,4 +1,4 @@
-using JustBlog.Persistence.Entities;
+﻿using JustBlog.Persistence.Entities;
 using JustBlog.Persistence.Mappings;
 using Microsoft.EntityFrameworkCore;
 
@@ -21,5 +21,7 @@ namespace JustBlog.Persistence
             modelBuilder.ApplyConfiguration(new PostCategoryMapping());
             modelBuilder.ApplyConfiguration(new PostMapping());
         }
+
+        public DbSet<JustBlog.Persistence.Entities.PostCategoryEntity> PostCategoryEntity { get; set; }
     }
 }
